@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #f0f0f0; -fx-padding: 20px;" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tikettravel.BookingController">
+
+    <Label style="-fx-font-size: 32px; -fx-text-fill: #333333; -fx-font-weight: bold;" text="Pemesanan Tiket" />
+
+    <!-- Bagian Detail Pemesanan -->
+    <VBox prefHeight="247.0" prefWidth="387.0" spacing="10" style="-fx-background-color: #ffffff; -fx-padding: 15px; -fx-border-radius: 5px; -fx-border-color: #cccccc; -fx-border-width: 1px;">
+        <Label style="-fx-font-size: 18px; -fx-text-fill: #333333; -fx-font-weight: bold;" text="Pembelian Tiket" />
+
+        <HBox alignment="CENTER" spacing="10">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #333333; -fx-min-width: 120px;" text="Nama Penumpang:" />
+            <TextField fx:id="namaPenumpangField" style="-fx-font-size: 14px;" />
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="10">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #333333; -fx-min-width: 120px;" text="Tanggal Keberangkatan:" />
+            <DatePicker fx:id="tanggalKeberangkatanPicker" style="-fx-font-size: 14px;" />
+        </HBox>
+      <HBox alignment="CENTER" spacing="10">
+         <children>
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #333333; -fx-min-width: 120px;" text="Jenis Kendaraan:" />
+            <ComboBox fx:id="jeniskendaraanComboBox" style="-fx-font-size: 14px;" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="10">
+         <children>
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #333333; -fx-min-width: 120px;" text="Rute Perjalanan:" />
+            <ComboBox fx:id="rutePerjalananComboBox" style="-fx-font-size: 14px;" />
+         </children>
+      </HBox>
+
+        <HBox alignment="CENTER" spacing="10">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #333333; -fx-min-width: 120px;" text="Harga Tiket:" />
+            <Label fx:id="hargaLabel" style="-fx-font-size: 14px;" />
+        </HBox>
+    </VBox>
+
+    <!-- Tombol untuk konfirmasi pemesanan -->
+    <Button fx:id="konfirmasiButton" onAction="#handleKonfirmasiClick" style="-fx-font-size: 16px; -fx-padding: 10px 20px; -fx-text-fill: #ffffff; -fx-background-color: #4CAF50; -fx-background-radius: 5px;" text="Konfirmasi Pemesanan" />
+</VBox>
